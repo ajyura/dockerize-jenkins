@@ -7,7 +7,7 @@ run:
 stop:
     @docker-compose -p jenkins stop
 
-clean:    stop
+clean: stop
     @docker-compose -p jenkins rm master nginx
 
 clean-data: clean
