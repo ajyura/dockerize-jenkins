@@ -31,3 +31,6 @@ COPY plugins.txt /tmp/plugins.txt
 RUN chmod +x /tmp/plugins.txt
 RUN chmod +x /usr/local/bin/plugins.sh 
 RUN /usr/local/bin/install-plugins.sh $(cat /tmp/plugins.txt | tr '\n' ' ')
+
+# Tini as the entry point to manage zombie processes
+ENTRYPOINT ["/bin/tini", "--", "/usr/local/bin/jenkins.sh"]
