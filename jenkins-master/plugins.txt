@@ -55,6 +55,7 @@ jacoco
 javadoc
 ace-editor
 handlebars
+jclouds-jenkins
 jquery-detached
 momentjs
 jobConfigHistory
