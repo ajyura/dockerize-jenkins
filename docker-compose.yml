@@ -1,0 +1,14 @@
+jenkinsdata:
+  build: /usr/dockerize-jenkins/jenkins-data
+jenkinsmaster:
+  build: /usr/dockerize-jenkins/jenkins-master
+  volumes_from:
+    - jenkinsdata
+  ports:
+    - "50000:50000"
+jenkinsnginx:
+  build: /usr/dockerize-jenkins/jenkins-nginx
+  ports:
+    - "80:80"
+  links:
+    - jenkinsmaster:jenkins-master
