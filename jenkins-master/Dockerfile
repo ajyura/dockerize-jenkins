@@ -21,8 +21,9 @@ ENV JAVA_OPTS="-Xmx8192m"
 ENV JENKINS_OPTS="--logfile=/var/log/jenkins/jenkins.log --webroot=/var/cache/jenkins/war"
 #--handlerCountStartup=100 --handlerCountMax=300 --logfile=/var/log/jenkins/jenkins.log
 
-# replace init.groovy file with custom
+# createa groovy hook scripts
 RUN rm /usr/share/jenkins/ref/init.groovy.d/tcp-slave-agent-port.groovy
+COPY master-slave.groovy /usr/share/jenkins/ref/init.groovy.d/slave-to-master-security-kill-switch.groovy
 COPY init.groovy /usr/share/jenkins/ref/init.groovy.d/tcp-slave-agent-port.groovy
 COPY setup-users.groovy /usr/share/jenkins/ref/init.groovy.d/setup-users.groovy
 
