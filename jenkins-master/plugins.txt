@@ -98,6 +98,10 @@ workflow-step-api
 workflow-support
 plain-credentials
 port-allocator
+semantic-versioning-plugin
+simple-theme-plugin
+slack
+sonar
 ssh-agent
 ssh-credentials
 ssh-slaves
