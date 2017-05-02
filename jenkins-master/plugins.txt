@@ -44,7 +44,6 @@ github-branch-source
 github-organization-folder
 github
 ghprb
-gradl
 greenballs
 groovy
 groovy-postbuild
