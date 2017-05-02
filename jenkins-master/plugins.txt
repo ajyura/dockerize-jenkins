@@ -111,3 +111,7 @@ versionnumber
 windows-slaves
 ws-cleanup
 xcode-plugin
+rebuild
+robot
+run-condition
+sbt
