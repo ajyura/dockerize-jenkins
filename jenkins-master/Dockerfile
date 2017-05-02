@@ -28,7 +28,7 @@ COPY setup-users.groovy /usr/share/jenkins/ref/init.groovy.d/setup-users.groovy
 
 # install default plugins
 # COPY plugins.txt /tmp/plugins.txt
-RUN chmod +x /usr/local/bin/install-plugins.sh
+# RUN chmod +x /usr/local/bin/install-plugins.sh
 RUN /usr/local/bin/install-plugins.sh artifactory:latest # $(cat /tmp/plugins.txt | tr '\n' ' ')
 
 # Tini as the entry point to manage zombie processes
