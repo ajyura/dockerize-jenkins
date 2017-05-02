@@ -24,7 +24,7 @@ ENV JENKINS_OPTS="--logfile=/var/log/jenkins/jenkins.log --webroot=/var/cache/je
 # replace init.groovy file with custom
 RUN rm /usr/share/jenkins/ref/init.groovy.d/tcp-slave-agent-port.groovy
 COPY init.groovy /usr/share/jenkins/ref/init.groovy.d/tcp-slave-agent-port.groovy
-COPY setup-users.groovy /usr/share/jenkins/ref/init.groovy.d/setup-users.groovy
+# COPY setup-users.groovy /usr/share/jenkins/ref/init.groovy.d/setup-users.groovy
 
 # install default plugins
 COPY plugins.txt /tmp/plugins.txt
