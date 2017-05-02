@@ -1,6 +1,6 @@
 FROM centos:centos7
 
-MAINTAINER adamyura
+MAINTAINER adam.j.yura
 
 # update OS
 RUN yum -y update; yum clean all
