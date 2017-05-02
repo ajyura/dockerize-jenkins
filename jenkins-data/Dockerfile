@@ -1,6 +1,6 @@
 FROM debian:jessie
 
-MAINTAINER adamyura
+MAINTAINER adam.j.yura
 
 # add jenkins user
 RUN useradd -d "/var/jenkins_home" -u 1000 -m -s /bin/bash jenkins
