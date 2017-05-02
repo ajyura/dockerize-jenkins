@@ -120,4 +120,4 @@ scoverage
 script-security
 sonar
 slack
-semantic-versioning-plugin
+simple-theme-plugin
