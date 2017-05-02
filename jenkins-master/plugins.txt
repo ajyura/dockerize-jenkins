@@ -96,6 +96,7 @@ workflow-cps-global-lib
 pipeline-stage-step
 workflow-step-api
 workflow-support
+
 plain-credentials
 port-allocator
 rebuild
@@ -112,13 +113,3 @@ sonar
 ssh-agent
 ssh-credentials
 ssh-slaves
-analysis-core
-structs
-subversion
-timestamper
-token-macro
-build-user-vars-plugin
-versionnumber
-windows-slaves
-ws-cleanup
-xcode-plugin
