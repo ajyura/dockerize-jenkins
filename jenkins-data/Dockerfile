@@ -12,9 +12,6 @@ RUN chown -R jenkins:jenkins /var/log/jenkins
 # make log folder a mount
 VOLUME ["/var/log/jenkins", "/var/jenkins_home"]
 
-# add in jobs
-COPY ./jobs/ /var/jenkins_home
-
 USER jenkins
 
 # output message confirmation
