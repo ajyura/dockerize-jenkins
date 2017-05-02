@@ -11,6 +11,7 @@ RUN chown -R jenkins:jenkins /var/log/jenkins
 
 # add in jobs
 RUN rm -r /var/jenkins_home/jobs
+RUN mkdir /var/jenkins_home/jobs
 COPY ./jobs/ /var/jenkins_home
 
 # make log folder a mount
