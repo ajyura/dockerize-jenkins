@@ -43,3 +43,16 @@ github-api
 github-branch-source
 github-organization-folder
 github
+ghprb
+gradl
+greenballs
+groovy
+groovy-postbuild
+icon-shim
+ivy
+jackson2-api
+jacoco
+javadoc
+ace-editor
+handlebars
+jclouds-jenkins
