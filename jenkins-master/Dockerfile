@@ -23,7 +23,7 @@ ENV JENKINS_OPTS="--logfile=/var/log/jenkins/jenkins.log --webroot=/var/cache/je
 
 # createa groovy hook scripts
 RUN rm /usr/share/jenkins/ref/init.groovy.d/tcp-slave-agent-port.groovy
-COPY master-slave.groovy /usr/share/jenkins/ref/init.groovy.d/slave-to-master-security-kill-switch.groovy
+# COPY master-slave.groovy /usr/share/jenkins/ref/init.groovy.d/slave-to-master-security-kill-switch.groovy
 COPY init.groovy /usr/share/jenkins/ref/init.groovy.d/tcp-slave-agent-port.groovy
 # COPY setup-users.groovy /usr/share/jenkins/ref/init.groovy.d/setup-users.groovy
 
