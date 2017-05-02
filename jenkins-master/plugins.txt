@@ -98,3 +98,16 @@ workflow-step-api
 workflow-support
 plain-credentials
 port-allocator
+ssh-agent
+ssh-credentials
+ssh-slaves
+analysis-core
+structs
+subversion
+timestamper
+token-macro
+build-user-vars-plugin
+versionnumber
+windows-slaves
+ws-cleanup
+xcode-plugin
