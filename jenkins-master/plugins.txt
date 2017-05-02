@@ -98,7 +98,6 @@ workflow-step-api
 workflow-support
 plain-credentials
 port-allocator
-PostBuildScript
 rebuild
 robot
 run-condition
