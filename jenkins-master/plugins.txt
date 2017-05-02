@@ -32,3 +32,14 @@ docker-slaves
 durable-task
 email-ext
 envinject
+external-monitor-job
+flexible-publish
+cloudbees-folder
+gatling
+git-client
+git
+git-server
+github-api
+github-branch-source
+github-organization-folder
+github
