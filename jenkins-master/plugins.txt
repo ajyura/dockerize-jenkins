@@ -118,3 +118,5 @@ sbt
 scm-api
 scoverage
 script-security
+sonar
+slack
