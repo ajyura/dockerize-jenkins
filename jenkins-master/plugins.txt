@@ -115,3 +115,6 @@ rebuild
 robot
 run-condition
 sbt
+scm-api
+scoverage
+script-security
