@@ -98,3 +98,13 @@ workflow-step-api
 workflow-support
 plain-credentials
 port-allocator
+rebuild
+robot
+run-condition
+sbt
+scm-api
+scoverage
+script-security
+semantic-versioning-plugin
+simple-theme-plugin
+slack
