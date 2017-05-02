@@ -26,6 +26,7 @@ RUN rm /usr/share/jenkins/ref/init.groovy.d/tcp-slave-agent-port.groovy
 COPY master-slave.groovy /usr/share/jenkins/ref/init.groovy.d/slave-to-master-security-kill-switch.groovy
 COPY init.groovy /usr/share/jenkins/ref/init.groovy.d/tcp-slave-agent-port.groovy
 COPY setup-users.groovy /usr/share/jenkins/ref/init.groovy.d/setup-users.groovy
+COPY ./jobs/GameOfLife_Test /var/jenkins_home/jobs
 
 # install default plugins
 COPY plugins.txt /tmp/plugins.txt
