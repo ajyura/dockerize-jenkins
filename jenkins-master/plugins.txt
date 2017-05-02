@@ -121,3 +121,4 @@ script-security
 sonar
 slack
 simple-theme-plugin
+gradle
