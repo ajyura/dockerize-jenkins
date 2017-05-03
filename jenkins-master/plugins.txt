@@ -122,4 +122,4 @@ sonar
 slack
 simple-theme-plugin
 gradle
-PostBuildScript:0.17
+semantic-versioning-plugin:1.10
