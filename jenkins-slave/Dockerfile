@@ -37,10 +37,8 @@ RUN echo "jenkins  ALL=(ALL)  ALL" >> etc/sudoers
 # set name servers
 COPY /files/resolv.conf /etc/resolv.conf
 
-#!/bin/bash
-
 # generate ssh key pair and move to authorized_keys
-RUN ssh-keygen -t rsa -b 4096 -P "passphrase" -f "./files/id_rsa" -q &&\
+RUN ssh-keygen -t rsa -b 4096 -P "passphrase" -f "./id_rsa" -q &&\
     mv -f id_rsa.pub authorized_keys
 
 # expose ssh port 22 and run ssh server
