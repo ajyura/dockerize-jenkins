@@ -1,19 +1,19 @@
 data:
-  build: /usr/dockerize-jenkins/jenkins-data
+  build: . ~/dockerize-jenkins/jenkins-data
 
 master:
-  build: /usr/dockerize-jenkins/jenkins-master
+  build: . ~/dockerize-jenkins/jenkins-master
   volumes_from:
     - data
   ports:
     - "50000:50000"
 
 nginx:
-  build: /usr/dockerize-jenkins/jenkins-nginx
+  build: . ~/dockerize-jenkins/jenkins-nginx
   ports:
     - "80:80"
   links:
     - master:jenkins-master
 
 slave:
-  build: /usr/dockerize-jenkins/jenkins-slave
+  build: . ~/dockerize-jenkins/jenkins-slave
