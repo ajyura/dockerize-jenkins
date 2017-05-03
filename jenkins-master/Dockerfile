@@ -27,9 +27,6 @@ COPY config/master-slave.groovy /usr/share/jenkins/ref/init.groovy.d/slave-to-ma
 COPY config/init.groovy /usr/share/jenkins/ref/init.groovy.d/tcp-slave-agent-port.groovy
 COPY config/setup-users.groovy /usr/share/jenkins/ref/init.groovy.d/setup-users.groovy
 
-# add seed job folder into home directory for use by jenkins
-COPY seed-job /var/jenkins_home/jobs
-
 # install default plugins
 COPY plugins.txt /tmp/plugins.txt
 # RUN chmod +x /usr/local/bin/install-plugins.sh
