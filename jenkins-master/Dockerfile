@@ -32,7 +32,7 @@ COPY plugins.txt /tmp/plugins.txt
 # RUN chmod +x /usr/local/bin/install-plugins.sh
 RUN /usr/local/bin/install-plugins.sh $(cat /tmp/plugins.txt | tr '\n' ' ')
 
-# copy seed job dsl script(s) - may be handles byu mounting host volume containing job data
+# copy seed job dsl script(s) - may be handled by mounting host volume containing job data
 # RUN mkdir /usr/share/jenkins/ref/jobs/SeedJob/workspace
 # COPY dsl/*.groovy /usr/share/jenkins/ref/jobs/SeedJob/workspace/
 
