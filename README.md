@@ -1,6 +1,6 @@
 # dockerize-jenkins
 
-# Objective
+## Objective
 To build a  fully operational Jenkins environment in Docker containers.
 
 The four Docker images that should be created are:
