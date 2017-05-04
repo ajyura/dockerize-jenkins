@@ -16,26 +16,26 @@ The four Docker images that should be created are:
     - DSL folder with the seed job (test)
   
   ##### Instructions for jenkins-master
-    1. Clone the repo
-    2. Ensure docker is running
-    3. Build the jenkins image
-       docker build -t jenkins ./jenkins-master
-    4. **If you wish to map jenkins to a volume on the host, note the path to that volume**
-    5. Run the jenkins-master container
-       docker run -p 80:8080 -p 443:8443 -p 50000:50000 -v jenkins_home:*/full path to host volume>/* -d --name jenkins-master jenkins
-    6. Connect to the jenkins instance in your browser via *<host IP>:80*
+   1. Clone the repo
+   2. Ensure docker is running
+   3. Build the jenkins image
+      docker build -t jenkins ./jenkins-master
+   4. **If you wish to map jenkins to a volume on the host, note the path to that volume**
+   5. Run the jenkins-master container
+      docker run -p 80:8080 -p 443:8443 -p 50000:50000 -v jenkins_home:*/full path to host volume>/* -d --name jenkins-master jenkins
+   6. Connect to the jenkins instance in your browser via *<host IP>:80*
  
   #### docker-compose
   The docker-compose.yml file defines the project 'jenkins' based on the above.
   Makefile invokes the defined YML file to build the images, run the containers, stop the containers, and clean the environment.
 
   ##### Instructions for docker-compose
-    1. Clone this repo to /usr (if another directory is requiredd, you must change the docker-compose.yml file to reflect)
-    2. Ensure that docker is running and docker-compose is installed
-    3. Build the images
-       make build
-    4. Start the Jenkins-master, -data, and -nginx containers
-       make run
-    5. Connect to the host IP on port 80
-    6. **Do not install any plugins**
-    7. Log in to Jenkins using *admin* / *password*
+   1. Clone this repo to /usr (if another directory is requiredd, you must change the docker-compose.yml file to reflect)
+   2. Ensure that docker is running and docker-compose is installed
+   3. Build the images
+      make build
+   4. Start the Jenkins-master, -data, and -nginx containers
+      make run
+   5. Connect to the host IP on port 80
+   6. **Do not install any plugins**
+   7. Log in to Jenkins using *admin* / *password*
