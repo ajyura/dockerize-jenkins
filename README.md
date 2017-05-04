@@ -13,3 +13,12 @@ The four Docker images that should be created are:
   The docker-compose.yml file defines the project 'jenkins' based on the above.
   
   Makefile invokes the defined YML file to build the images, run the containers, stop the containers, and clean the environment.
+
+### Instructions
+1. Clone this repo to /usr (if another directory is requiredd, you must change the docker-compose.yml file to reflect)
+2. Ensure that docker is running and docker-compose is installed
+3. 'make build' to build the images
+4. 'make run' to start the Jenkins-master, -data, and -nginx containers
+5. Connect to the host IP on port 80
+6. *Do not install any plugins*
+7. Log in to Jenkins using *admin* / *password*
