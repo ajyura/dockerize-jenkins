@@ -3,16 +3,16 @@ FROM jenkins:latest
 MAINTAINER adam.j.yura
 
 # elevate priveleges
-USER root
+# USER root
 
 # set a log folder
-RUN mkdir /var/log/jenkins
+# RUN mkdir /var/log/jenkins
 # set a cache folder
-RUN mkdir /var/cache/jenkins
+# RUN mkdir /var/cache/jenkins
 # enable jenkins to write to cache folder
-RUN chown -R  jenkins:jenkins /var/cache/jenkins
+# RUN chown -R  jenkins:jenkins /var/cache/jenkins
 # enable jenkins to write to log folder
-RUN chown -R  jenkins:jenkins /var/log/jenkins
+# RUN chown -R  jenkins:jenkins /var/log/jenkins
 # set user to jenkins
 USER jenkins
 
