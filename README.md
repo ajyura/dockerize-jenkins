@@ -20,5 +20,5 @@ The four Docker images that should be created are:
 3. 'make build' to build the images
 4. 'make run' to start the Jenkins-master, -data, and -nginx containers
 5. Connect to the host IP on port 80
-6. *Do not install any plugins*
+6. **Do not install any plugins**
 7. Log in to Jenkins using *admin* / *password*
