@@ -20,11 +20,13 @@ The four Docker images that should be created are:
    3. Build the jenkins image
    
           docker build -t jenkins ./jenkins-master
-   4. **If you wish to map jenkins to a volume on the host, mount the volume at the host path: */var/lib/docker/volumes/jenkins_home_data*.** In order to port Jenkins configurations, job data, and credentials from another instance of Jenkins, the host volume must be a copy of the JENKINS_HOME directory from the original Jenkins instance.
+   4. **If you wish to map jenkins to a volume on the host, note the full path of the mounted volume.** In order to port Jenkins configurations, job data, and credentials from another instance of Jenkins, the host volume ***must be a copy of the JENKINS_HOME directory from the original Jenkins instance.***
    5. Run the jenkins-master container
    
           docker run -p 80:8080 -p 443:8443 -p 50000:50000 -v <full path to host volume>:/var/jenkins_home -d --name jenkins-master jenkins
    6. Connect to the jenkins instance in your browser via *http://<*host IP*>*:80
+   7. **Do not install any plugins**
+   8. Log in to Jenkins using *admin* / *password*
  
  
   #### docker-compose
@@ -32,14 +34,15 @@ The four Docker images that should be created are:
   Makefile invokes the defined YML file to build the images, run the containers, stop the containers, and clean the environment.
 
   ##### Instructions for docker-compose
-   1. Clone this repo to /usr (if another directory is requiredd, you must change the docker-compose.yml file to reflect)
-   2. Ensure that docker is running and docker-compose is installed
-   3. Build the images
+   1. Remove indicated comments from the jenkins-master Dockerfile
+   2. Clone this repo to /usr (if another directory is requiredd, you must change the docker-compose.yml file to reflect)
+   3. Ensure that docker is running and docker-compose is installed
+   4. Build the images
    
           make build
-   4. Start the Jenkins-master, -data, and -nginx containers
+   5. Start the Jenkins-master, -data, and -nginx containers
    
           make run
-   5. Connect to the host IP on port 80
-   6. **Do not install any plugins**
-   7. Log in to Jenkins using *admin* / *password*
+   6. Connect to the host IP on port 80
+   7. **Do not install any plugins**
+   8. Log in to Jenkins using *admin* / *password*
