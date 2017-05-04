@@ -19,11 +19,11 @@ The four Docker images that should be created are:
    2. Ensure docker is running
    3. Build the jenkins image
    
-          docker build -t jenkins ./jenkins-master
+          docker build -t jenkins_master ./jenkins-master
    4. **If you wish to map jenkins to a volume on the host, note the full path of the mounted volume.** In order to port Jenkins configurations, job data, and credentials from another instance of Jenkins, the host volume ***must be a copy of the JENKINS_HOME directory from the original Jenkins instance.***
    5. Run the jenkins-master container
    
-          docker run -p 80:8080 -p 443:8443 -p 50000:50000 -v <full path to host volume>:/var/jenkins_home -d --name jenkins-master jenkins
+          docker run -p 80:8080 -p 443:8443 -p 50000:50000 -v <full path to host volume>:/var/jenkins_home -d --name jenkins-master jenkins_master
    6. Connect to the jenkins instance in your browser via *http://<*host IP*>*:80
    7. **Do not install any plugins**
    8. Log in to Jenkins using *admin* / *password*
