@@ -18,7 +18,7 @@ USER jenkins
 
 # set some environment variables
 # ENV JAVA_OPTS="-Xmx8192m"
-# ENV JENKINS_OPTS="--logfile=/var/log/jenkins/jenkins.log --webroot=/var/cache/jenkins/war"
+ENV JENKINS_OPTS="--logfile=/var/log/jenkins/jenkins.log --webroot=/var/cache/jenkins/war"
 #--handlerCountStartup=100 --handlerCountMax=300 --logfile=/var/log/jenkins/jenkins.log
 
 # create groovy hook scripts
