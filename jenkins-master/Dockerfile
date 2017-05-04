@@ -32,9 +32,9 @@ COPY plugins.txt /tmp/plugins.txt
 # RUN chmod +x /usr/local/bin/install-plugins.sh
 RUN /usr/local/bin/install-plugins.sh $(cat /tmp/plugins.txt | tr '\n' ' ')
 
-# copy seed job dsl script(s)
-RUN mkdir /usr/share/jenkins/ref/jobs/SeedJob/workspace
-COPY dsl/*.groovy /usr/share/jenkins/ref/jobs/SeedJob/workspace/
+# copy seed job dsl script(s) - may be handles byu mounting host volume containing job data
+# RUN mkdir /usr/share/jenkins/ref/jobs/SeedJob/workspace
+# COPY dsl/*.groovy /usr/share/jenkins/ref/jobs/SeedJob/workspace/
 
 # Tini as the entry point to manage zombie processes
 ENTRYPOINT ["/bin/tini", "--", "/usr/local/bin/jenkins.sh"]
