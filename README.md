@@ -1,8 +1,9 @@
 # dockerize-jenkins
 
-## Objective
+### Objective
 To build a  fully operational Jenkins environment in Docker containers.
 
+### Overview
 The four Docker images that should be created are:
   - Jenkins-master: the primary Jenkins engine that stores plugins & data, coordinates jobs, and serves the web UI
   - Jenkins-data: the container volume serving as the data persistence layer for the Jenkins environment
