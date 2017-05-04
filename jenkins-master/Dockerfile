@@ -33,6 +33,7 @@ COPY plugins.txt /tmp/plugins.txt
 RUN /usr/local/bin/install-plugins.sh $(cat /tmp/plugins.txt | tr '\n' ' ')
 
 # copy seed job dsl script(s)
+RUN mkdir /usr/share/jenkins/ref/jobs/SeedJob/workspace
 COPY dsl/*.groovy /usr/share/jenkins/ref/jobs/SeedJob/workspace/
 
 # Tini as the entry point to manage zombie processes
