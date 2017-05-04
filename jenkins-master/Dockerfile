@@ -14,7 +14,7 @@ MAINTAINER adam.j.yura
 # enable jenkins to write to log folder
 # RUN chown -R  jenkins:jenkins /var/log/jenkins
 # set user to jenkins  
-USER jenkins
+USER root
 
 # set some environment variables
 # ENV JAVA_OPTS="-Xmx8192m"
