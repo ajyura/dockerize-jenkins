@@ -10,10 +10,9 @@ The four Docker images that should be created are:
   - Jenkins-slave: the build slave which can be spun up and down by the Jenkins-master application as required
   - Jenkins-nginx: the web proxy for the Jenkins-master
   
+  
   ### Building Jenkins master
-  The jenkins-master directory contains everything needed to build and run the master image, including:
-    - Dockerfile
-    - DSL folder with the seed job (test)
+  The jenkins-master directory contains everything needed to build and run the master image, including the Dockerfile and DSL folder with the seed job (test)
   
   ##### Instructions for jenkins-master
    1. Clone the repo
@@ -26,6 +25,7 @@ The four Docker images that should be created are:
    
           docker run -p 80:8080 -p 443:8443 -p 50000:50000 -v jenkins_home:<full path to host volume> -d --name jenkins-master jenkins
    6. Connect to the jenkins instance in your browser via *http://<*host IP*>*:80
+ 
  
   #### docker-compose
   The docker-compose.yml file defines the project 'jenkins' based on the above.
